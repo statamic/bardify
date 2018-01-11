@@ -57,6 +57,8 @@ Simple enough, but tedious to do it for all your entries.
 
 > Note: This modifies your data, so consider making a backup first.
 
+> Another Note: This doesn't support multiple locales yet.
+
 Download this repo and place it in `site/addons/Bardify` and run this command:
 
 ```
