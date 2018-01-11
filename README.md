@@ -1,5 +1,5 @@
 # Bardify
-> Convert your Statamic Replicator fields into Bard fields.
+> Convert your Statamic Replicator and/or content fields into Bard fields.
 
 ## Overview
 Bard fields are just like Replicator fields, except that the "text" blocks are implied and saved as `text` in your content.
@@ -71,3 +71,16 @@ It will automate the following:
 - Remove the "text" set from the Replicator field.
 - Change `type: replicator` to `type: bard`. (Wow!)
 - If you were using a markdown fieldtype for the text field, it will add `markdown: true` to the Bard field.
+
+
+## Converting content fields to Bard
+
+You may also convert your `content` field (the text below your YAML front-matter) into a Bard field by running the following command:
+
+```
+php please bardify:content
+```
+
+It will automate the following:
+- Go through any relevant content files and replace the content text with the field name of your choice.
+- If you were using a markdown fieldtype, it will add `markdown: true` to the Bard field.
