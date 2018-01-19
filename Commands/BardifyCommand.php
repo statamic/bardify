@@ -85,7 +85,7 @@ class BardifyCommand extends Command
         }
 
         return $this->fieldsets = collect(Fieldset::all())->map(function ($fieldset) {
-            $replicators = collect($fieldset->fields())->filter(function ($field) {
+            $replicators = collect($fieldset->fieldsWithPartials())->filter(function ($field) {
                 return array_get($field, 'type', 'text') === 'replicator';
             })->map(function ($field, $key) {
                 return $key;
@@ -102,7 +102,7 @@ class BardifyCommand extends Command
     private function convertFieldset()
     {
         $fieldset = Fieldset::get($this->fieldset);
-        $fields = $fieldset->fields();
+        $fields = $fieldset->fieldsWithPartials();
 
         $fields[$this->replicator] = tap(array_get($fields, $this->replicator), function (&$config) {
             $config['type'] = 'bard';
