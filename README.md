@@ -1,6 +1,3 @@
-# Bardify
-> Convert your Statamic Replicator and/or content fields into Bard fields.
-
 ## Overview
 Bard fields are just like Replicator fields, except that the "text" blocks are implied and saved as `text` in your content.
 
