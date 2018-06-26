@@ -26,7 +26,7 @@ and your data would be saved like this:
 story:
   -
     type: text
-    text: "<p>This is my story</p>"
+    html: "<p>This is my story</p>"
   -
     type: quote
     quote: Oh Hai Mark
